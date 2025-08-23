@@ -6,10 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:user-system": "node dist/user-system/server/server.mjs",
-    "build:ssr": "ng build && ng run user-system:server",
-    "serve:ssr": "node dist/user-system/server/main.js"
+    "test": "ng test"
 
   },
   "private": true,
