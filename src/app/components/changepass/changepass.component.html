@@ -1,0 +1,74 @@
+<section class="changepass">
+  <div class="container">
+
+
+    <div class="change-info">
+      <div class="col-12">
+        <form class="form"  [formGroup]="changePassForm" (ngSubmit)="Save()">
+
+
+          <div class="form-head">
+            <h5>Change Password</h5>
+          </div>
+          <div class="form-info">
+            <label for="oldpass">OldPassword:</label>
+            <input type="password" id="oldpass" class="form-control" placeholder="enter current password here .." formControlName="currentPassword"
+            [ngClass]="{
+              'is-valid' : !changePassForm.get('currentPassword')?.errors && (changePassForm.get('currentPassword')?.touched ||changePassForm.get('currentPassword')?.dirty) ,
+              'is-invalid' : changePassForm.get('currentPassword')?.errors && (changePassForm.get('currentPassword')?.touched ||changePassForm.get('currrentPassword')?.dirty)
+            }"
+            >
+
+            @if (changePassForm.get("currentPassword")?.errors && changePassForm.get("currentPassword")?.touched) {
+              <div class="alert alert-danger">
+
+                @if ( changePassForm.get("currentPassword")?.getError("required")) {
+                  <p>Old password is required</p>
+                }
+
+                @else if (changePassForm.get("currentPassword")?.getError("pattern")) {
+                  <p>Password must be 8-20 characters long and contain only lowercase letters and numbers</p>
+                }
+              </div>
+            }
+          </div>
+
+
+
+            <div class="form-info">
+            <label for="newpass">Newpassword:</label>
+            <input type="password" id="newpass" class="form-control" placeholder="enter new password here .." formControlName="newPassword" [ngClass]="{
+              'is-valid' : !changePassForm.get('newPassword')?.errors && (changePassForm.get('newPassword')?.touched ||changePassForm.get('newPassword')?.dirty) ,
+              'is-invalid' : changePassForm.get('newPassword')?.errors && (changePassForm.get('newPassword')?.touched ||changePassForm.get('newPassword')?.dirty)
+            }">
+
+
+
+            @if (changePassForm.get("newPassword")?.errors && changePassForm.get("newPassword")?.touched) {
+              <div class="alert alert-danger">
+
+                @if (changePassForm.get("newPassword")?.getError("required")) {
+                  <p>new password is required</p>
+                }
+
+
+                @else if (changePassForm.get("newPassword")?.getError("pattern")) {
+                  <p>Password must be 8-20 characters long and contain only lowercase letters and numbers</p>
+                }
+              </div>
+            }
+          </div>
+
+
+          <button class="btn "> Save
+
+            @if (isLoading() ) {
+              <span> <i class="fas fa-spin fa-spinner"></i></span>
+            }
+
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

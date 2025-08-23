@@ -1,0 +1,84 @@
+<section class="edit-user-info">
+  <div class="container">
+
+
+
+    <div class="edit-details">
+      <div class="col-12">
+        <div class="edit-head">
+          <h6>📝 Edit User Information </h6>
+        </div>
+
+
+        <form class="form"   [formGroup]="UpdateUserForm"  (ngSubmit)="UpdateSave()">
+
+          <div class="form-info">
+            <label for="firstname">FristName:</label>
+            <input type="text" id="firstname" class="form-control" placeholder="enter first name here .." formControlName="firstName">
+
+
+            @if (UpdateUserForm.get("firstName")?.errors && UpdateUserForm.get("firstName")?.touched) {
+              <div class="alert alert-danger">
+                @if (UpdateUserForm.get("firstName")?.getError("required")) {
+                  <p>First name is required</p>
+                }
+
+                @else if (UpdateUserForm.get("firstName")?.getError("minlength")) {
+                  <p>First name must be at least 5 characters long</p>
+                }
+
+
+                @else if (UpdateUserForm.get("firstName")?.getError("maxlength")) {
+                  <p>First name cannot be longer than 15 characters</p>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="form-info">
+            <label for="role">Role:</label>
+            <input type="text" id="role" placeholder="enter role here .. " class="form-control" formControlName="role">
+
+            @if (UpdateUserForm.get("role")?.errors && UpdateUserForm.get("role")?.touched) {
+              <div class="alert alert-danger">
+                @if (UpdateUserForm.get("role")?.getError("required")) {
+                  <p>role is required</p>
+                }
+
+
+                @else if (UpdateUserForm.get("role")?.getError("maxlength")) {
+                  <p> role Maximum length is 4 characters</p>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="form-info-last d-flex  align-items-center  w-20">
+            <label for="isactive">isActive:</label>
+            <input type="checkbox" id="isactive" formControlName="isActive">
+
+
+          </div>
+           @if (UpdateUserForm.get("isActive")?.errors && UpdateUserForm.get("isActive")?.touched) {
+              <div class="alert alert-danger   w-100">
+                @if (UpdateUserForm.get("isActive")?.getError("required")) {
+                  <p>is active is requried.</p>
+                }
+              </div>
+            }
+
+
+
+          <button class="btn">Save
+
+            @if (isLoading()) {
+              <span> <i class="fas fa-spin fa-spinner"></i></span>
+            }
+
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

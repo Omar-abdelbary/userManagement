@@ -1,0 +1,141 @@
+
+.profile-info {
+  width: 100%;
+  height: 100vh;
+  background-color: #456962;
+  padding-top: 20px;
+}
+
+
+.profile-info .profile-user-message {
+  width: 100%;
+  margin: auto !important;
+  height: auto;
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 1px solid #ef9b28;
+
+}
+
+.profile-info .profile-user-message h2 {
+  color: #ef9b28;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 12px;
+  padding-top: 15px;
+  margin-bottom: 12px;
+}
+
+
+.profile-info .profile-user-message p {
+  color: #ef9b28;
+  font-size: 20px;
+  margin-left: 12px;
+  padding-bottom: 15px;
+}
+
+.profile-info .profile-user-info {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border: 1px solid #ef9b28;
+  margin-top: 20px ;
+  border-radius: 20px;
+  background-color: #f0f8ff;
+
+
+
+}
+
+.profile-info .profile-user-info .user-head {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #456962;
+
+}
+
+.profile-info .profile-user-info .user-head h3 {
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(100, 65, 23) ;
+  padding-top: 15px;
+}
+
+.profile-info .profile-user-info .user-head h3 i {
+  color: #ef9b28;
+}
+
+.profile-info .profile-user-info  .user-details {
+  /* display: flex; */
+  width: 100%;
+  height: auto;
+
+}
+
+
+
+.profile-info .profile-user-info .form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile-info .profile-user-info .form .form-info {
+  width: 50% !important;
+  height: auto;
+  /* display: flex; */
+  margin-bottom: 10px;
+
+}
+
+.profile-info .profile-user-info .form .form-info label {
+  width: 100% ;
+  height: auto;
+  color: #ef9b28;
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 6px;
+}
+
+
+
+.profile-info .profile-user-info .form .form-info .form-control  {
+  width: 95% !important;
+  height: auto;
+  margin-left: 15px;
+}
+
+
+
+
+@media (max-width:767px) {
+
+  .profile-info .profile-user-info {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .profile-info .profile-user-info .form .form-info .form-control  {
+  width: 90% !important;
+  height: auto;
+  margin-left: 5px;
+}
+
+}
+
+
+
+@media (min-width:768px) and (max-width:1023px) {
+
+
+.profile-info {
+  padding-top: 100px;
+}
+
+}

@@ -1,0 +1,88 @@
+
+.not-found {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../assets/imgs/register-background.jpeg);
+  padding-top: 200px;
+}
+
+
+.not-found .not-found-info {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+
+}
+
+
+.not-found .not-found-info h5 {
+  color: #ef9b28;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.not-found .not-found-info h6 {
+  color: #49494999;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  padding-bottom: 35px;
+}
+
+
+.not-found .not-found-info .btn {
+  background-color: #ef9b28;
+  color: rgb(255, 255, 255);
+  margin-bottom: 35px;
+  margin-left: 150px;
+  width: 50%;
+
+}
+
+
+@media (max-width:767px) {
+
+  .not-found .not-found-info {
+  width: 100% ;
+}
+
+
+.not-found .not-found-info .btn {
+  margin-left: 100px;
+}
+
+
+}
+
+
+
+@media (min-width:768px) and (max-width:1023px) {
+
+
+
+
+.not-found {
+
+  padding-top: 350px;
+}
+
+  .not-found .not-found-info {
+  width: 100% ;
+}
+
+
+.not-found .not-found-info .btn {
+  margin-left: 200px;
+}
+
+
+}

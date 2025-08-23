@@ -1,0 +1,92 @@
+
+
+<section class="update-profile">
+  <div class="container">
+
+
+    <div class="change-info">
+      <div class="col-12">
+        <form class="form"  [formGroup]="UpdateProfile" (ngSubmit)="Submit()">
+
+
+          <div class="form-head">
+            <h5>UpdateProfile</h5>
+          </div>
+          <div class="form-info">
+            <label for="firstname">firstName:</label>
+            <input type="text" id="firstname" class="form-control" placeholder="enter current password here .." formControlName="firstName" [ngClass]="{
+              'is-valid' : !UpdateProfile.get('firstName')?.errors && (UpdateProfile.get('firstName')?.touched ||UpdateProfile.get('firstName')?.dirty) ,
+              'is-invalid' : UpdateProfile.get('firstName')?.errors && (UpdateProfile.get('firstName')?.touched ||UpdateProfile.get('firstName')?.dirty)
+            }">
+
+
+            @if (UpdateProfile.get("firstName")?.errors && UpdateProfile.get("firstName")?.touched) {
+              <div class="alert alert-danger">
+                @if (UpdateProfile.get("firstName")?.getError("required")) {
+                            <p>First name is required</p>
+                }
+
+
+                @else if (UpdateProfile.get("firstName")?.getError("minlength")) {
+                  <p>First name must be at least 5 characters long</p>
+                }
+
+
+                @else if (UpdateProfile.get("firstName")?.getError("maxlength")) {
+                  <p>First name cannot be longer than 15 characters</p>
+                }
+
+
+
+              </div>
+            }
+
+
+          </div>
+
+
+
+            <div class="form-info">
+            <label for="lastname">lastName:</label>
+            <input type="text" id="lastname" class="form-control" placeholder="enter new password here .." formControlName="lastName" [ngClass]="{
+              'is-valid' : !UpdateProfile.get('lastName')?.errors && (UpdateProfile.get('lastName')?.touched ||UpdateProfile.get('lastName')?.dirty),
+              'is-invalid' : UpdateProfile.get('lastName')?.errors && (UpdateProfile.get('lastName')?.touched ||UpdateProfile.get('lastName')?.dirty)
+            }">
+
+
+            @if (UpdateProfile.get("lastName")?.errors && UpdateProfile.get("lastName")?.touched) {
+              <div class="alert alert-danger">
+
+                @if (UpdateProfile.get("lastName")?.getError("required")) {
+                  <p>last Name is required</p>
+                }
+
+
+                @else if( UpdateProfile.get("lastName")?.getError("minlength")) {
+                  <p>last Name must be at least 5 characters long</p>
+                }
+
+                @else if (UpdateProfile.get("lastName")?.getError("maxlength")) {
+                  <p>last Name cannot be longer than 15 characters</p>
+                }
+              </div>
+            }
+
+
+
+
+          </div>
+
+
+          <button class="btn "> Save
+
+            @if (isLoading()) {
+              <span><i class="fas fa-spin fa-spinner"></i></span>
+            }
+
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

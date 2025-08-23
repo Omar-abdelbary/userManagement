@@ -1,0 +1,247 @@
+/*
+
+
+.all-users-info {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(69, 105, 98);
+  padding-top: 15px;
+}
+
+
+
+ .all-users-info .all-users-header {
+  width: 30% !important;
+  background-color: #e6e6e6;
+  margin-bottom: 24px;
+  border-radius: 20px;
+
+}
+
+.all-users-info .all-users-header h3 {
+  font-size: 24px;
+  padding-bottom: 20px;
+  color: rgb(239, 155, 40);
+  padding-top: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+
+.all-users-details .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.info {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.info:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.info h3 {
+  font-size: 17px;
+  margin: 0 0 6px;
+  color: rgb(239, 155, 40);
+}
+
+.info p {
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: rgb(239, 155, 40);
+  font-size: 16px;
+}
+
+.info span {
+  display: inline-block;
+  font-size: 13px;
+  padding: 4px 10px;
+  margin-bottom: 6px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3742fa;
+  font-weight: 500;
+}
+
+
+
+@media (max-width:767px) {
+
+   .all-users-info .all-users-header {
+  width: 70% !important ;
+
+}
+
+} */
+
+
+
+
+.all-users-info {
+  width: 100%;
+  height: 100vh !important;
+  /* background-color: rgb(69, 105, 98); */
+  background-image: url(../../../assets/imgs/register-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 15px;
+}
+
+.all-users-info .all-users-header {
+  width: 30% !important;
+  background-color: #e6e6e6;
+  margin-bottom: 24px;
+  border-radius: 20px;
+}
+
+.all-users-info .all-users-header h3 {
+  font-size: 24px;
+  padding-bottom: 20px;
+  color: rgb(239, 155, 40);
+  padding-top: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.all-users-details .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* الكارت الأساسي */
+.info {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.info h3 {
+  font-size: 17px;
+  margin: 0 0 6px;
+  color: rgb(239, 155, 40);
+}
+
+.info p {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: rgb(239, 155, 40);
+}
+
+.info span {
+  display: inline-block;
+  font-size: 13px;
+  padding: 4px 10px;
+  margin-bottom: 6px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3742fa;
+  font-weight: 500;
+}
+
+/* ✅ overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(69, 105, 98, 0.85);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.info:hover .overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay-content {
+  display: flex;
+  gap: 12px;
+}
+
+.overlay-content button {
+  background: #fff;
+  border: none;
+  font-size: 18px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overlay-content button:hover {
+  transform: scale(1.2);
+}
+
+.overlay-content .fa-eye { color: #2ecc71; }
+.overlay-content .fa-edit { color: #3498db; }
+.overlay-content .fa-trash { color: #e74c3c; }
+
+@media (max-width:767px) {
+  .all-users-info .all-users-header {
+    width: 70% !important;
+  }
+}
+
+
+
+@media (max-width:767px) {
+
+  .all-users-info {
+  padding-bottom: 100px;
+}
+
+.all-users-info {
+  width: 100%;
+  height: 100vh !important;
+  background-color: rgb(69, 105, 98);
+  padding-top: 15px;
+  /* margin-bottom: 30px; */
+}
+
+}
+
+@media (min-width:768px)and (max-width:1023px) {
+.all-users-info {
+  width: 100%;
+  height: 100vh !important;
+  background-color: rgb(69, 105, 98);
+  padding-top: 15px;
+}
+
+
+}

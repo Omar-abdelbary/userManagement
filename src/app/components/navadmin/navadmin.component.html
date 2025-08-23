@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="allusers"><img src="./assets/imgs/navbar-log2o.svg" class="img-fluid" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item ">
+          <a class="nav-link" routerLinkActive="active" routerLink="allusers">allUsers</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="stats">System Statistics</a>
+        </li>
+
+
+      </ul>
+
+      <button class="btn"  (click)="this._AuthService.signOut()"> <i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut</button>
+
+    </div>
+  </div>
+</nav>

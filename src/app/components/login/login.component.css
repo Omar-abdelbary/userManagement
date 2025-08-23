@@ -1,0 +1,175 @@
+
+
+.login {
+  width: 100% !important;
+  height: 120vh;
+  /* background-color: rgb(254, 183, 14)!important; */
+  background-image: url(../../../assets/imgs/login-background.jpeg);
+  background-size: cover;
+  padding-top: 40px;
+}
+
+
+.login .login-heading {
+  /* text-align: center; */
+  margin: auto !important;
+  width: 50% !important;
+  height: auto;
+  margin-bottom: 20px !important;
+}
+
+.login .login-heading .img-fluid {
+  width: 40%;
+  height: auto;
+  margin: auto !important;
+  margin-left: 150px !important;
+}
+
+.login-about {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: #315951e5;
+  margin-bottom: 60px !important;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.login .login-about .login-head h3 {
+  text-align: center;
+  padding-top: 25px;
+  color: #fff3c4;
+  margin-bottom: 12px;
+  font-size: 23px;
+  text-decoration: underline;
+}
+
+
+.login .form {
+  width: 100%;
+  height: auto;
+}
+
+.login .form .form-head h5 {
+  text-align: center;
+  color: #fff3c4;
+  font-size: 20px;
+}
+
+
+.login .form .form-head p {
+  text-align: center;
+  color: #fff3c4;
+  font-size: 16px;
+}
+
+
+.login .form .form-info {
+  margin-bottom: 12px;
+}
+.login .form .form-info label {
+  width: 100%;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  color: #fff3c4;
+}
+.login .form .form-info .form-control {
+  width: 95%;
+  height: auto;
+  margin-left: 15px;
+  background-color: #fff7e0;
+  transition: 0.3s ease;
+}
+
+
+
+
+.login .form .btn {
+  margin-left: 35px;
+  margin-top: 30px;
+  background-color: #f3b157;
+  margin-bottom: 25px;
+  width: 28%;
+  color: #fff7e0;
+  transition: ease all 1s;
+}
+
+.login .form .btn:hover {
+  background-color: #ef9b28;
+}
+
+
+.login .form .alert {
+  width: 95%;
+  height: 45px;
+  padding: 6px;
+  margin-left: 15px;
+
+}
+
+.login .form .alert p {
+
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+
+.login .form .form-info ul {
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  list-style-type: none;
+  display: flex;
+  margin-top: 10px;
+
+
+}
+.login .form .form-info a {
+  margin-right: 15px;
+
+  justify-content: space-around;
+  color: #fff3c4;
+  text-decoration: none;
+}
+
+
+@media (max-width:767px) {
+
+
+  .login .login-about {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .login .login-heading .img-fluid {
+  width: 70%;
+  height: auto;
+  margin: auto !important;
+  margin-left: 50px !important;
+}
+
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+
+
+    .login .login-about {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .login {
+  width: 100% !important;
+  height: 120vh;
+  background-image: url(../../../assets/imgs/login-background.jpeg);
+  background-size: cover;
+  padding-top: 240px;
+}
+
+
+}

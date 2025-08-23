@@ -1,0 +1,147 @@
+<section class="register">
+  <div class="container">
+
+
+    <div class="register-about">
+      <div class="col-12">
+        <div class="register-head">
+          <h3>User Management System</h3>
+        </div>
+      </div>
+
+
+
+
+
+      <form class="form" [formGroup]="registerForm"  (ngSubmit)="registerSubmit()">
+      <div class="form-head">
+        <h6>Create new account</h6>
+
+      </div>
+
+
+
+
+
+      <div class="form-info">
+        <label for="firstname">Firstname: </label>
+        <input type="text" id="firstname" class="form-control"  placeholder="enter first name here .."
+          formControlName="firstName" [ngClass]="{
+          'is-valid' : !registerForm.get('firstName')?.errors && (registerForm.get('firstName')?.touched ||registerForm.get('firstName')?.dirty) ,
+          'is-invalid' : registerForm.get('firstName')?.errors && (registerForm.get('firstName')?.touched||registerForm.get('firstName')?.dirty)
+        }">
+
+        @if (registerForm.get("firstName")?.errors && registerForm.get("firstName")?.touched) {
+        <div class="alert alert-danger">
+
+          @if (registerForm.get("firstName")?.getError("required")) {
+          <p>First name is required</p>
+          }
+
+          @else if (registerForm.get("firstName")?.getError("minlength")) {
+          <p>First name must be at least 5 characters long</p>
+          }
+
+
+          @else if (registerForm.get("firstName")?.getError("maxlength")) {
+          <p>First name cannot be longer than 15 characters</p>
+          }
+        </div>
+        }
+      </div>
+
+
+      <div class="form-info">
+        <label for="lastname">Lastname:</label>
+        <input type="text" id="lastname" class="form-control" formControlName="lastName"
+          placeholder="enter last name here .." [ngClass]="{
+          'is-valid' : !registerForm.get('lastName')?.errors && (registerForm.get('lastName')?.touched ||registerForm.get('lastName')?.dirty) ,
+          'is-invalid' : registerForm.get('lastName')?.errors && (registerForm.get('lastName')?.touched ||registerForm.get
+        ('firstName')?.dirty)
+        }">
+
+        @if (registerForm.get("lastName")?.errors && registerForm.get("lastName")?.touched) {
+        <div class="alert alert-danger">
+          @if (registerForm.get("lastName")?.getError("required")) {
+          <p>last Name is required</p>
+          }
+
+
+          @else if ( registerForm.get("lastName")?.getError("minlength")) {
+          <p>last Name must be at least 5 characters long</p>
+          }
+
+
+          @else if (registerForm.get("lastName")?.getError("maxlength")) {
+          <p>last Name cannot be longer than 15 characters</p>
+          }
+        </div>
+        }
+      </div>
+
+
+      <div class="form-info">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" formControlName="email" placeholder="enter email here .."
+          [ngClass]="{
+          'is-valid' : !registerForm.get('email')?.errors && (registerForm.get('email')?.touched ||registerForm.get('email')?.dirty) ,
+
+          'is-invalid' : registerForm.get('email')?.errors && (registerForm.get('email')?.touched ||registerForm.get('email')?.dirty)
+                  }">
+
+
+        @if (registerForm.get("email")?.errors && registerForm.get("email")?.touched) {
+        <div class="alert alert-danger">
+          @if (registerForm.get("email")?.getError("required")) {
+          <p>email name is required</p>
+          }
+
+          @else if (registerForm.get("email")?.getError("email")) {
+          <p> Please enter a valid email address</p>
+          }
+
+
+
+        </div>
+        }
+      </div>
+
+
+      <div class="form-info">
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" formControlName="password"
+          placeholder="enter password here"   [ngClass]="{
+            'is-valid' : !registerForm.get('password')?.errors && (registerForm.get('password')?.touched ||registerForm.get('password')?.dirty) ,
+            'is-invalid' : registerForm.get('password')?.errors && (registerForm.get('password')?.touched ||registerForm.get('password')?.dirty)
+          }">
+
+
+        @if (registerForm.get("password")?.errors && registerForm.get("password")?.touched) {
+        <div class="alert alert-danger">
+          @if (registerForm.get("password")?.getError("required")) {
+          <p>Password is required</p>
+          }
+
+
+          @else if (registerForm.get("password")?.getError("pattern")) {
+          <p>Password must be 8-20 characters long and contain only lowercase letters and numbers</p>
+          }
+        </div>
+        }
+      </div>
+
+
+      <button class="btn "> Sign Up
+        @if (isLoading()) {
+          <span> <i class="fas fa-spin fa-spinner"></i></span>
+        }
+         </button>
+    </form>
+    </div>
+
+
+
+
+
+  </div>
+</section>

@@ -1,0 +1,39 @@
+
+
+@if (Stats()) {
+<div class="Stats-container" >
+  <div class="stats-head">
+    <h3>System Statistics</h3>
+  </div>
+
+
+  <div class="stats-cards">
+    <div class="card">
+      <p>Total Users</p>
+      <h2>{{ Stats().totalUsers }}</h2>
+    </div>
+    <div class="card">
+      <p>Active Users</p>
+      <h2>{{ Stats().activeUsers }}</h2>
+    </div>
+    <div class="card">
+      <p>Inactive Users</p>
+      <h2>{{ Stats().inactiveUsers }}</h2>
+    </div>
+    <div class="card">
+      <p>Admins</p>
+      <h2>{{ Stats().adminUsers }}</h2>
+    </div>
+    <div class="card">
+      <p>Regular Users</p>
+      <h2>{{ Stats().regularUsers }}</h2>
+    </div>
+    <div class="card">
+      <p>Recent Registrations</p>
+      <h2>{{ Stats().recentRegistrations }}</h2>
+    </div>
+  </div>
+</div>
+}
+
+

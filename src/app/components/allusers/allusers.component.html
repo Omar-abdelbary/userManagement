@@ -1,0 +1,64 @@
+<!-- <section class="all-users-info">
+  <div class="container">
+
+
+    <div class="all-users-header">
+      <h3>All Users Total: {{ AllUsers().length }}</h3>
+
+    </div>
+
+
+
+    <div class="all-users-details">
+      <div class="row">
+        @for (user of AllUsers() ; track user.id) {
+        <div class="info">
+          <h3>Name : {{ user.firstName }} {{ user.lastName }}</h3>
+          <p>Email : {{ user.email }}</p>
+          <span>Role : {{ user.role }}</span>
+          <span>Active: {{user.isActive}}</span>
+          <span>Create : {{user.createdAt |date}}</span>
+          <span>Update : {{user.updatedAt |date}}</span>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+
+<section class="all-users-info">
+  <div class="container">
+
+    <div class="all-users-header">
+      <h3>All Users Total: {{ AllUsers().length }}</h3>
+    </div>
+
+    <div class="all-users-details">
+      <div class="row">
+        @for (user of AllUsers() ; track user.id) {
+        <div class="info">
+          <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+          <p>Email : {{ user.email }}</p>
+          <span>Role : {{ user.role }}</span>
+          <span>Active: {{user.isActive}}</span>
+          <span>Create : {{user.createdAt | date}}</span>
+          <span>Update : {{user.updatedAt | date}}</span>
+
+
+          <div class="overlay">
+            <div class="overlay-content">
+              <button title="View" (click)="viewUser(user.id)"><i class="fa fa-eye"></i></button>
+              <button title="Edit" [routerLink]="['/updateuser' , user.id]"><i class="fa fa-edit"></i></button>
+              <button title="Delete" class="delete" (click)="deleteUser(user.id)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

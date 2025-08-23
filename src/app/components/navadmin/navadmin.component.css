@@ -1,0 +1,40 @@
+
+
+
+.navbar {
+  width: 100%;
+  height: auto;
+
+}
+
+.navbar .img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.navbar .navbar-nav {
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+
+.navbar .navbar-nav .nav-item {
+  margin-right: 8px;
+}
+
+
+
+.navbar .btn {
+  background-color: #ef9b28;
+  color: #f4e5ed;
+  transition: ease all 1s;
+  margin-right: 20px;
+  margin-top: 6px;
+}
+
+.navbar .btn:hover {
+  background-color: #f4e5ed;
+  color: #ef9b28;
+}
+
+
