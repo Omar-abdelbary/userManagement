@@ -1,10 +1,19 @@
-
 {
   "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@vercel/node" }
+    {
+      "src": "dist/user-system/server/server.mjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/user-system/browser/**",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "/(.*)",
+      "dest": "dist/user-system/server/server.mjs"
+    }
   ]
 }
