@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/services/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-login-admin',
@@ -53,7 +54,9 @@ export class LoginAdminComponent {
             }
           },
           error:(err :HttpErrorResponse)=>{
-            
+
+            console.log(err);
+
             this.isLoading.set(false) ;
             this._ToastrService.error(err.error.message , "PMS ProjectManagement")
           }
