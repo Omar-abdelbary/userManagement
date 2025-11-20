@@ -1,5 +1,5 @@
 
 
 export const environment = {
-  baseUrl : "https://user-management-api-drab.vercel.app"
+  baseUrl : "https://user-management-api-yfg2.vercel.app"
 }
